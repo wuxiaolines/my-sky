@@ -1,0 +1,65 @@
+/*row栅格系统 start*/
+
+.container-fluid {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+.row {
+  overflow: hidden;
+}
+.row [class*='col-'] {
+  position: relative;
+  min-height: 2rpx;
+  float: left;
+}
+.col-1 {
+  width: 14%;
+}
+
+.col-2 {
+  width: 16.66666667%;
+}
+
+.col-2-5 {
+  width: 20%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333%;
+}
+
+.col-5 {
+  width: 41.666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33333333%;
+}
+
+.col-12 {
+  width: 100%;
+}
+/*row栅格系统 end*/

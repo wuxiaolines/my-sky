@@ -1,0 +1,193 @@
+.page,
+page {
+  color: #262626;
+  font-weight: 400;
+  font-size: 28rpx;
+  font-family:
+    PingFangSC-Regular,
+    Roboto,
+    Helvetica Neue,
+    Helvetica,
+    Tahoma,
+    Arial,
+    PingFang SC-Light,
+    Microsoft YaHei;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--theme-default-bg-color);
+
+  --theme-linear-color: rgba(0, 77, 65, 0.4);
+  --theme-bg-color: #fff;
+  // --theme-default-bg-color: #f0f0f0;
+  --theme-default-bg-color: #edeef2;
+  --theme-bg-color-launch: #0A0A0C;
+  --theme-border-color: #e0e0e0;
+  --theme-text-light: #fff;
+  --theme-text-dark: #000;
+  --theme-text-primary-color: rgba(0, 0, 0, 1);
+  --theme-text-color-3: rgba(0, 0, 0, 0.3);
+
+  // 2026-03-17 自定义变量
+  // --theme-primary-color: #60BA00;
+  --theme-primary-color: #A8E666;
+  --theme-tabbar-primary-color: #A8E666;
+  --theme-text-color: rgba(0, 0, 0, 1);
+  --theme-text-color-2: #cccac7;
+
+  --theme-upload-width: 128rpx;
+  --theme-upload-height: 128rpx;
+
+  // ====== 平行世界日记 (Parallel World Diary) 主题变量 ======
+  --pd-bg-primary: #0F0F23;
+  --pd-bg-card: rgba(255, 255, 255, 0.03);
+  --pd-border-card: rgba(255, 255, 255, 0.06);
+  --pd-text-primary: #FFFFFF;
+  --pd-text-secondary: #94A3B8;
+  --pd-purple: #6366F1;
+  --pd-pink: #F472B6;
+  --pd-cyan: #22D3EE;
+  --pd-green: #10B981;
+  --pd-amber: #F59E0B;
+  --pd-text-purple: #818CF8;
+}
+
+uni-toast {
+  z-index: 10000 !important;
+}
+
+image {
+  max-width: 100%;
+}
+
+uni-view,
+view,
+text {
+  word-break: break-all;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.clearfix:after {
+  content: ' ';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@for $i from 1 through 5 {
+  .line-clamp-#{$i} {
+    @if $i ==1 {
+      @extend .text-overflow;
+    }
+
+    @else {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: $i;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
+
+.upload-img-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .upload-img-item {
+    position: relative;
+    width: 187rpx;
+    height: 187rpx;
+    border: 1px solid rgb(235, 236, 238);
+    overflow: hidden;
+    margin: 10rpx;
+    background: rgb(244, 245, 246);
+    border-radius: 10rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .upload-img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+  }
+
+  .upload-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .upload-icon-close-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5rpx;
+    z-index: 2;
+  }
+
+  .upload-error-text {
+    position: absolute;
+    text-align: center;
+    background: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 22rpx;
+    z-index: 1;
+  }
+}
+
+// 清除默认button样式
+.clear-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+
+  &::after {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.custom-title-line {
+  position: absolute;
+  // bottom: -3rpx;
+  bottom: 1rpx;
+  left: 0;
+  width: 100%;
+  height: 12rpx;
+  background: linear-gradient(91deg, var(--theme-primary-color) 0%, rgba(0, 77, 65, 0.4) 100%);
+}
