@@ -1,0 +1,1 @@
+import{j as a}from"./index-Dt97vBeT.js";const t=a({id:"global",state:()=>({isOpenPage:!1,toastDelay:!1,globalData:{}}),getters:{},actions:{setOpenPage(a){this.isOpenPage=a},setToastDelay(a){this.toastDelay=a||!1},setGlobalDataQuery(a){var t;this.globalData={...this.globalData,query:{...null==(t=this.globalData)?void 0:t.query,...a}}}}});export{t as u};
